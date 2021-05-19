@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="btn-group pull-right">
                 <form class="btn-group" action="novo" method="GET">
-                    <button type="submit" class="btn btn-link">Cadastrar contatos</button>
+                    <button type="submit" class="btn btn-link">Cadastrar contatos</button> <!-- botao do cadastro-->
                 </form>
                 <form class="btn-group">
                     <h5> | </h5>
@@ -32,37 +32,7 @@
                     <h4>Seus Contatos</h4>
                 </div>
             </div>
-            <c:choose>
-                <c:when test="${contatos != null && !contatos.isEmpty()}">
-                    <div class="row">
-                        <div class="form-group col-xs-12 col-sm-10 col-md-10 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2 text-center">
-                            <table id="tabelaContato" class="table table-bordered">
-                                <thead>
-                                    <th class="text-center" onclick="sortTable(0)">NOME</th>
-                                    <th class="text-center" onclick="sortTable(1)">EMAIL</th>
-                                    <th class="text-center" onclick="sortTable(2)">TELEFONE</th>
-                                    <th class="text-center" style="cursor:text">ALTERAR</th>
-                                    <th class="text-center" style="cursor:text">REMOVER</th>
-                                </thead>
-                                <c:forEach items="${contatos}" var="contato">
-                                    <tr>
-                                        <td>${contato.nome}</td>
-                                        <td><a href="mailto:${contato.email}">${contato.email}</a></td>
-                                        <td>${contato.telefone}</td>
-                                        <td>
-                                            <a href='javascript:confirmaAlterar("${contato.id}","${contato.nome}","${contato.email}","${contato.telefone}");'
-                                               class="btn btn-info btn-xs">X</a>
-                                        </td>
-                                        <td>
-                                            <a href='javascript:confirmaRemover("${contato.id}","${contato.nome}","${contato.email}","${contato.telefone}");'
-                                               class="btn btn-danger btn-xs">X</a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
-                            </table>
-                        </div>
-                    </div>
-                </c:when>
+           
                 <c:when test="${agendavazia != null}">
                     <div class="row">
                         <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
@@ -85,6 +55,37 @@
                     </div>
                 </div>   
             </c:if>
+         <c:choose>
+                <c:when test="${contatos != null && !contatos.isEmpty()}">
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-sm-10 col-md-10 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2 text-center">
+                            <table id="tabelaContato" class="table table-bordered">
+                                <thead>
+                                    <th class="text-center" onclick="sortTable(0)">NOME</th>
+                                    <th class="text-center" onclick="sortTable(1)">EMAIL</th>
+                                    <th class="text-center" onclick="sortTable(2)">CELULAR</th>
+                                    <th class="text-center" style="cursor:text">MODIFICAR</th>
+                                    <th class="text-center" style="cursor:text">EXCLUIR</th>
+                                </thead>
+                                <c:forEach items="${contatos}" var="contato">
+                                    <tr>
+                                        <td>${contato.nome}</td>
+                                        <td><a href="mailto:${contato.email}">${contato.email}</a></td>
+                                        <td>${contato.telefone}</td>
+                                        <td>
+                                            <a href='javascript:confirmaAlterar("${contato.id}","${contato.nome}","${contato.email}","${contato.telefone}");'
+                                               class="btn btn-info btn-xs">X</a>
+                                        </td>
+                                        <td>
+                                            <a href='javascript:confirmaRemover("${contato.id}","${contato.nome}","${contato.email}","${contato.telefone}");'
+                                               class="btn btn-danger btn-xs">X</a>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                        </div>
+                    </div>
+                </c:when>
             <div class="row">
                 <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-4 col-md-offset-4 col-lg-offset-5 text-center">
                 </div>
