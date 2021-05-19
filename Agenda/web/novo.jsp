@@ -27,13 +27,23 @@
             <br>
             <br>
             <div class="row">
-                <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                <div class="form-group 
+                            col-xs-10 
+                            col-sm-8 
+                            col-md-6 
+                            col-lg-6 
+                            col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                     <h4>Cadastrar Contato</h4>
                 </div>
             </div>
             <form action="novo" method="POST">
                 <div class="row">
-                    <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                    <div class="form-group 
+                                col-xs-10 
+                                col-sm-8 
+                                col-md-6 
+                                col-lg-6 
+                                col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                         <label for="nome">Nome:</label>
                         <input type="text" maxlength="50" class="form-control text-center" id="nome" placeholder="Digite o nome" name="nome"
                                required oninvalid="this.setCustomValidity('Entre com o nome do contato.')" oninput="this.setCustomValidity('')"
@@ -41,7 +51,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                    <div class="form-group
+                                col-xs-10 
+                                col-sm-8 
+                                col-md-6 
+                                col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                         <label for="email">Email:</label>
                         <input type="email" maxlength="70" class="form-control text-center" id="email" placeholder="Digite o email" name="email"
                                required oninvalid="this.setCustomValidity('Entre com o email do contato.')" oninput="this.setCustomValidity('')"
@@ -49,7 +63,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                    <div class="form-group 
+                                col-xs-10 
+                                col-sm-8 
+                                col-md-6 
+                                col-lg-6 
+                                col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                         <label for="telefone">Telefone:</label>
                         <input type="number" maxlength="13" class="form-control text-center" id="telefone" placeholder="Digite o telefone" name="telefone"
                                required oninvalid="this.setCustomValidity('Entre com o telefone do contato.')" oninput="this.setCustomValidity('')"
@@ -57,13 +76,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                    <div class="form-group 
+                                col-xs-10 
+                                col-sm-8 
+                                col-md-6 
+                                col-lg-6 
+                                col-xs-offset-1 
+                                col-sm-offset-2 
+                                col-md-offset-3 col-lg-offset-3 text-center">
                         <button type="submit" class="btn btn-primary btn-largura-padrao">Cadastrar</button>
                     </div>
                 </div>
                 <c:if test="${sucesso != null || erro != null}">
                     <div class="row">
-                        <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                        <div class="form-group 
+                                    col-xs-10 
+                                    col-sm-8 
+                                    col-md-6 
+                                    col-lg-6 
+                                    col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                             <c:choose>
                                 <c:when test="${sucesso != null}">
                                     <span class="help-block" style="color: limegreen">${sucesso}</span>
@@ -77,7 +108,15 @@
                 </c:if>
             </form>
             <div class="row">
-                <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                <div class="form-group 
+                            col-xs-10 
+                            col-sm-8 
+                            col-md-6 
+                            col-lg-6 
+                            col-xs-offset-1 
+                            col-sm-offset-2
+                            col-md-offset-3 
+                            col-lg-offset-3 text-center">
                 </div>
             </div>
         </div>
