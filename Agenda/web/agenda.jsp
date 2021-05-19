@@ -28,14 +28,26 @@
             <br>
             <br>
             <div class="row">
-                <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-4 col-md-offset-4 col-lg-offset-5 text-center">
+                <div class="form-group 
+                            col-xs-10 
+                            col-sm-4 
+                            col-md-4 
+                            col-lg-2 
+                            col-xs-offset-1 
+                            col-sm-offset-4 col-md-offset-4 col-lg-offset-5 text-center">
                     <h4>Seus Contatos</h4>
                 </div>
             </div>
            
                 <c:when test="${agendavazia != null}">
                     <div class="row">
-                        <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                        <div class="form-group 
+                                    col-xs-10 
+                                    col-sm-8 
+                                    col-md-6
+                                    col-lg-6
+                                    col-xs-offset-1 
+                                    col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                             <span class="help-block" style="color:red">${agendavazia}</span>
                         </div>
                     </div>
@@ -43,7 +55,13 @@
             </c:choose>
             <c:if test="${sucesso != null || erro != null}">
                 <div class="row">
-                    <div class="form-group col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
+                    <div class="form-group 
+                                col-xs-10
+                                col-sm-8 
+                                col-md-6 
+                                col-lg-6 
+                                col-xs-offset-1
+                                col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
                         <c:choose>
                             <c:when test="${sucesso != null}">
                                 <span class="help-block" style="color:limegreen">${sucesso}</span>
@@ -58,7 +76,14 @@
          <c:choose>
                 <c:when test="${contatos != null && !contatos.isEmpty()}">
                     <div class="row">
-                        <div class="form-group col-xs-12 col-sm-10 col-md-10 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2 text-center">
+                        <div class="form-group 
+                                    col-xs-12 
+                                    col-sm-10 
+                                    col-md-10 
+                                    col-lg-8 
+                                    col-xs-offset-0 
+                                    col-sm-offset-1 
+                                    col-md-offset-1 col-lg-offset-2 text-center">
                             <table id="tabelaContato" class="table table-bordered">
                                 <thead>
                                     <th class="text-center" onclick="sortTable(0)">NOME</th>
@@ -87,7 +112,15 @@
                     </div>
                 </c:when>
             <div class="row">
-                <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-2 col-xs-offset-1 col-sm-offset-4 col-md-offset-4 col-lg-offset-5 text-center">
+                <div class="form-group 
+                            col-xs-10 
+                            col-sm-4 
+                            col-md-4 
+                            col-lg-2 
+                            col-xs-offset-1 
+                            col-sm-offset-4 
+                            col-md-offset-4 
+                            col-lg-offset-5 text-center">
                 </div>
             </div>
         </div>
